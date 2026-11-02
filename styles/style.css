@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inter;
+}
+
+.container {
+  max-width: 1480px;
+  margin-inline: auto;
+}
+
+.hero {
+  background-color: #043873;
+  height: 921px;
+  position: relative;
+}
+
+/* Navbar */
+.nav-logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-right-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.nav-links ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin: 16px;
+  color: #fff;
+}
+
+.navbar .logo span {
+  color: #fff;
+}
+
+.nav-buttons {
+  margin-left: 60px;
+}
+.nav-buttons .log-btn {
+  border: none;
+  border-radius: 8px;
+  background-color: #4F9CF9;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 20px;
+  background-color: #FFE492;
+  color: #043873;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.nav-buttons .btn-main {
+  border: none;
+  border-radius: 8px;
+  background-color: #4F9CF9;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 20px;
+  margin-left: 24px;
+}
+
+/* Showcase */
+.showcase {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  margin-top: 140px;
+}
+
+.left-side {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  align-items: unset;
+}
+.left-side .showcase-head-text {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 100%;
+}
+.left-side .showcase-main-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  margin-top: 24px;
+  margin-bottom: 60px;
+}
+
+.showcase-button .btn-main {
+  border: none;
+  border-radius: 8px;
+  background-color: #4F9CF9;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 20px;
+}
+
+.showcase-img img {
+  max-width: 824px;
+}
+
+/* Project Managment */
+.p-managment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 140px;
+  margin-bottom: 140px;
+}
+
+/* top section */
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-section .left-side {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  align-items: unset;
+  padding-right: 16px;
+}
+.top-section .left-side .project-head-text {
+  font-weight: 700;
+  font-size: 72px;
+}
+.top-section .left-side .project-main-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  margin-top: 24px;
+  margin-bottom: 60px;
+}
+.top-section .left-side .btn-main {
+  border: none;
+  border-radius: 8px;
+  background-color: #4F9CF9;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.top-section .project-image {
+  max-width: 748px;
+}
+
+/* low section */
+.low-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.low-section .project-image {
+  max-width: 710px;
+}
+.low-section .right-side {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  align-items: unset;
+  padding-left: 100px;
+}
+.low-section .right-side .project-head-text {
+  font-weight: 700;
+  font-size: 72px;
+}
+.low-section .right-side .project-main-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  margin-top: 24px;
+  margin-bottom: 60px;
+}
+.low-section .right-side .btn-main {
+  border: none;
+  border-radius: 8px;
+  background-color: #4F9CF9;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}/*# sourceMappingURL=style.css.map */

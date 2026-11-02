@@ -1,0 +1,20 @@
+@mixin flexCenter() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin btnPrimary {
+    border: none;
+    border-radius: 8px;
+    background-color: #4F9CF9;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 20px;
+}
+
+@mixin margin-top24-bottom60 {
+    margin-top: 24px;
+    margin-bottom: 60px;
+}
