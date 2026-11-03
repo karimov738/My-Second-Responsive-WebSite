@@ -18,3 +18,8 @@
     margin-top: 24px;
     margin-bottom: 60px;
 }
+
+@mixin padding-left-right-40 {
+    padding-left: 40px;
+    padding-right: 40px;
+}

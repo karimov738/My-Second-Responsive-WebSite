@@ -19,6 +19,9 @@
     background-color: $Primmary-color;
     height: 921px;
     position: relative;
+    background-image: url(/images/Element.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* Navbar */
@@ -87,6 +90,7 @@
     @include flexCenter();
     flex-direction: column;
     align-items: unset;
+    max-width: 45%;
 
     .showcase-head-text {
         font-weight: 700;
@@ -108,8 +112,12 @@
     }
 }
 
-.showcase-img img {
-    max-width: 824px;
+.showcase-img {
+    max-width: 55%;
+
+    img {
+        width: 100%;
+    }
 }
 
 /* Project Managment */
@@ -130,6 +138,7 @@
         flex-direction: column;
         align-items: unset;
         padding-right: 16px;
+        max-width: 48%;
 
         .project-head-text {
             font-weight: 700;
@@ -144,32 +153,41 @@
         }
 
         .btn-main {
-            @include btnPrimary;
-            padding-left: 40px;
-            padding-right: 40px;
+            @include btnPrimary();
+            @include padding-left-right-40();
+        }
+
+    }
+
+    .project-image {
+        max-width: 50%;
+
+        img {
+            width: 100%;
         }
     }
 
-
-    .project-image {
-        max-width: 748px;
-    }
 }
 
 /* low section */
 
 .low-section {
     @include flexCenter();
+    margin-top: 100px;
 
-    .project-image {
-        max-width: 710px;
+    .project-image_2 {
+        max-width: 50%;
+
+        img {
+            width: 100%;
+        }
     }
 
     .right-side {
         @include flexCenter;
         flex-direction: column;
         align-items: unset;
-        padding-left: 100px;
+        max-width: 46%;
 
         .project-head-text {
             font-weight: 700;
@@ -185,10 +203,334 @@
 
         .btn-main {
             @include btnPrimary;
-            padding-left: 40px;
-            padding-right: 40px;
+            @include padding-left-right-40
         }
 
     }
 
 }
+
+/* Extension section */
+
+.extension-bg {
+    background-color: $Primmary-color;
+}
+
+.extension {
+    @include flexCenter();
+    padding-top: 140px;
+    padding-bottom: 140px;
+    color: #fff;
+
+    .left-side {
+        max-width: 48%;
+
+        .extension-header {
+            font-weight: 700;
+            font-size: 72px;
+        }
+
+        .extension-text {
+            font-weight: 400;
+            font-size: 18px;
+            @include margin-top24-bottom60
+        }
+
+        .btn-main {
+            @include btnPrimary();
+            @include padding-left-right-40();
+        }
+
+    }
+}
+
+.extension-image {
+    max-width: 46%;
+
+    img {
+        width: 100%;
+    }
+}
+
+/* Custom section */
+
+.custom {
+    @include flexCenter();
+    margin-top: 140px;
+    margin-bottom: 140px;
+    color: $Secondary-color;
+
+    .custom-image {
+        max-width: 48%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .right-side {
+        @include flexCenter();
+        flex-direction: column;
+        align-items: start;
+        max-width: 45%;
+
+        .custom-header {
+            font-weight: 700;
+            font-size: 72px;
+            line-height: 100%;
+        }
+
+        .custom-text {
+            font-weight: 400;
+            font-size: 18px;
+            @include margin-top24-bottom60();
+        }
+
+        .btn-main {
+            @include btnPrimary();
+            @include padding-left-right-40();
+        }
+    }
+}
+
+/* Plans section */
+
+.plans {
+    @include flexCenter();
+    flex-direction: column;
+    margin-top: 140px;
+    color: $Secondary-color;
+
+    .plans-header {
+        @include flexCenter();
+        flex-direction: column;
+
+        .header-text {
+            font-weight: 700;
+            font-size: 72px;
+        }
+
+        .plans-text {
+            font-weight: 400;
+            font-size: 18px;
+            margin-top: 24px;
+        }
+    }
+
+    .plans-cards {
+        @include flexCenter();
+        padding-top: 63px;
+        padding-bottom: 63px;
+
+        .card {
+            max-width: 472px;
+            border: 1px solid $Third-color;
+            border-radius: 10px;
+            padding: 40px 44px 40px 44px;
+
+            .card-header {
+                .sub-type {
+                    font-weight: 600;
+                    font-size: 24px;
+                }
+
+                .sub-price {
+                    font-weight: 700;
+                    font-size: 36px;
+                    margin: 20px 0;
+                }
+
+                .sub-benefit {
+                    font-weight: 500;
+                    font-size: 18px;
+                }
+            }
+
+            .sub-options {
+                margin: 25px 0;
+
+                div {
+                    display: flex;
+                    margin-top: 28px;
+
+                    h1 {
+                        font-weight: 500;
+                        font-size: 18px;
+                        margin-left: 20px;
+                        line-height: 20px;
+                    }
+                }
+            }
+
+            .btn-sub {
+                @include btnPrimary();
+                color: $Secondary-color;
+                background-color: #fff;
+                border: 1px solid $Third-color;
+                @include padding-left-right-40();
+            }
+        }
+
+        .blue-card {
+            background-color: $Primmary-color;
+            color: #fff;
+            margin-left: 32px;
+            margin-right: 32px;
+            padding: inherit;
+            padding-left: 44px;
+            padding-right: 44px;
+
+            .sub-price {
+                color: $Third-color;
+            }
+
+            .btn-main {
+                @include btnPrimary();
+                @include padding-left-right-40();
+            }
+        }
+    }
+}
+
+/* Your work */
+
+.your-work-bg {
+    background-color: $Primmary-color;
+}
+
+.your-work {
+    padding: 140px 160px;
+}
+
+.your-work-content {
+    @include flexCenter();
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+
+    .your-work-header {
+        font-weight: 700;
+        font-size: 72px;
+    }
+
+    .your-work-text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        @include margin-top24-bottom60();
+    }
+
+    .your-work-button {
+        .btn-main {
+            @include btnPrimary();
+            @include padding-left-right-40();
+        }
+    }
+}
+
+/* Your Data section */
+
+.data {
+    @include flexCenter();
+    padding: 140px 0;
+    color: $Secondary-color;
+
+    .left-side {
+        @include flexCenter();
+        flex-direction: column;
+        align-items: unset;
+        max-width: 54%;
+
+        .data-header {
+            font-weight: 700;
+            font-size: 72px;
+        }
+
+        .data-text {
+            font-weight: 400;
+            font-size: 18px;
+            @include margin-top24-bottom60;
+        }
+
+        .btn-main {
+            @include btnPrimary;
+            @include padding-left-right-40;
+        }
+    }
+
+    .data-image {
+        max-width: 46%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+/* Sponsors */
+
+.sponsors {
+    @include flexCenter;
+    align-items: stretch;
+    flex-direction: column;
+    padding: 140px 0;
+
+    .sponsors-header {
+        font-weight: 700;
+        font-size: 72px;
+        text-align: center;
+    }
+
+    .sponsors-logo {
+        @include flexCenter;
+        margin-top: 100px;
+    }
+}
+
+/* Fav App */
+
+.fav-app-bg {
+    background-color: $Primmary-color;
+
+    .fav-app {
+        @include flexCenter;
+        padding: 140px 0;
+        color: #fff;
+
+        .fav-app-image {
+            max-width: 47%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .right-side {
+            @include flexCenter;
+            flex-direction: column;
+            align-items: unset;
+            max-width: 47%;
+
+            .fav-app-header {
+                font-weight: 700;
+                font-size: 72px;
+            }
+
+            .fav-app-text {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 30px;
+                @include margin-top24-bottom60;
+            }
+
+            .btn-main {
+                @include btnPrimary;
+            }
+        }
+
+    }
+}
+
+
+// ======== Media screens =========
+@import 'media';
