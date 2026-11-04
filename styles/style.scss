@@ -525,6 +525,107 @@
 
             .btn-main {
                 @include btnPrimary;
+                @include padding-left-right-40;
+            }
+        }
+
+    }
+}
+
+
+/* Our clients section */
+
+.clients {
+    @include flexCenter();
+    flex-direction: column;
+    padding: 140px 0;
+
+    .clients-header {
+        font-weight: 700;
+        font-size: 70px;
+        color: $Secondary-color;
+    }
+
+    .clients-cards {
+        @include flexCenter();
+        margin-top: 60px;
+
+        .card:first-child {
+            background-color: #fff;
+            box-shadow: 15px 10px 50px 0px #0000001A;
+            color: $Secondary-color;
+        }
+
+        .card {
+            max-width: 32%;
+            padding: 60px 40px;
+            border-radius: 10px;
+            background-color: $Button-color;
+
+            .card-top {
+                padding-bottom: 40px;
+                border-bottom: 1px solid $Secondary-color;
+
+                .card-text {
+                    margin-top: 32px;
+                    font-weight: 400;
+                    font-size: 18px;
+                    color: #fff;
+                }
+            }
+
+            .our-client {
+                @include flexCenter();
+                margin-top: 60px;
+
+                .avatar {
+                    max-width: 25%;
+
+                    img {
+                        width: 100%;
+                        border-radius: 50%;
+                    }
+                }
+
+                .client-description {
+                    @include flexCenter();
+                    align-items: unset;
+                    flex-direction: column;
+                    max-width: 64%;
+
+                    .description-header {
+                        font-weight: 600;
+                        font-size: 24px;
+                        color: $Secondary-color;
+                    }
+
+                    .description-text {
+                        margin-top: 15px;
+                        font-weight: 400;
+                        font-size: 16px;
+                        color: #fff;
+                    }
+                }
+            }
+
+        }
+
+        .card:first-child {
+            background-color: #fff;
+            box-shadow: 15px 10px 50px 0px #0000001A;
+
+            .card-top {
+                .card-text {
+                    color: $Secondary-color;
+                }
+            }
+
+            .our-client {
+                .client-description {
+                    .description-text {
+                        color: $Secondary-color;
+                    }
+                }
             }
         }
 
