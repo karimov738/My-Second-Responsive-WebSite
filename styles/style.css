@@ -6,6 +6,15 @@
   font-family: inter;
 }
 
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .container {
   max-width: 1480px;
   margin-inline: auto;
@@ -327,7 +336,7 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  margin-top: 140px;
+  padding: 140px 0;
   color: #212529;
 }
 .plans .plans-header {
@@ -349,14 +358,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 63px;
-  padding-bottom: 63px;
+  margin-top: 63px;
 }
 .plans .plans-cards .card {
   max-width: 472px;
   border: 1px solid #FFE492;
   border-radius: 10px;
-  padding: 40px 44px 40px 44px;
+  padding: 40px 44px;
 }
 .plans .plans-cards .card .card-header .sub-type {
   font-weight: 600;
@@ -403,9 +411,7 @@
   color: #fff;
   margin-left: 32px;
   margin-right: 32px;
-  padding: inherit;
-  padding-left: 44px;
-  padding-right: 44px;
+  padding: 80px 44px;
 }
 .plans .plans-cards .blue-card .sub-price {
   color: #FFE492;
@@ -656,6 +662,192 @@
 }
 .clients .clients-cards .card:first-child .our-client .client-description .description-text {
   color: #212529;
+}
+.clients .dots {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+}
+.clients .dots .dot {
+  width: 12px;
+  height: 12px;
+  background-color: #4F9CF9;
+  border-radius: 50%;
+}
+.clients .dots .dot:nth-child(2) {
+  background-color: #043873;
+  margin: 0 12px;
+}
+
+.footer-bg {
+  background-color: #043873;
+}
+
+.try-whitepace {
+  max-width: 608px;
+  margin-inline: auto;
+}
+.try-whitepace .whitepace-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  padding-top: 140px;
+  max-width: 608px;
+}
+.try-whitepace .whitepace-content .whitepace-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.try-whitepace .whitepace-content .whitepace-top .whitepace-header {
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 100%;
+}
+.try-whitepace .whitepace-content .whitepace-top .whitepace-text {
+  padding: 24px 0 0;
+  font-weight: 400;
+  font-size: 24px;
+}
+.try-whitepace .whitepace-content .whitepace-button {
+  padding: 40px 0;
+}
+.try-whitepace .whitepace-content .whitepace-button .btn-main {
+  border: none;
+  border-radius: 8px;
+  background-color: #4F9CF9;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.try-whitepace .whitepace-content .big-team {
+  font-weight: 400;
+  font-size: 24px;
+}
+.try-whitepace .whitepace-content .whitepace-logos {
+  padding: 40px 0 0;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer {
+  color: #fff;
+}
+.footer .footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: unset;
+  border-bottom: 1px solid #2E4E73;
+  padding: 140px 0 67px;
+}
+.footer .footer-top .whitepace-overview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: unset;
+  flex-direction: column;
+  max-width: 16.8%;
+}
+.footer .footer-top .whitepace-overview .overview-logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 28px;
+}
+.footer .footer-top .whitepace-overview .overview-logo span {
+  padding-left: 10px;
+}
+.footer .footer-top .whitepace-overview .overview-text {
+  padding: 15px 0;
+  font-size: 18px;
+  line-height: 30px;
+}
+.footer .footer-top .product,
+.footer .footer-top .resources,
+.footer .footer-top .company {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  align-items: unset;
+}
+.footer .footer-top .product li,
+.footer .footer-top .resources li,
+.footer .footer-top .company li {
+  padding: 7px 0;
+}
+.footer .footer-top .product li:first-child,
+.footer .footer-top .resources li:first-child,
+.footer .footer-top .company li:first-child {
+  font-weight: 700;
+  font-size: 18px;
+}
+.footer .footer-top .product .yellow,
+.footer .footer-top .resources .yellow,
+.footer .footer-top .company .yellow {
+  color: #FFE492;
+}
+.footer .footer-top .try-it {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  align-items: unset;
+  max-width: 17.5%;
+}
+.footer .footer-top .try-it .header {
+  font-weight: 700;
+  font-size: 28px;
+}
+.footer .footer-top .try-it .btn-main {
+  border: none;
+  border-radius: 8px;
+  background-color: #4F9CF9;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.footer .footer-low {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0;
+}
+.footer .footer-low .left-bar {
+  width: 50%;
+}
+.footer .footer-low .left-bar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .footer-low .left-bar ul li:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .footer-low .left-bar ul li:first-child a {
+  padding: 0 6px;
+}
+.footer .footer-low .right-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 7%;
 }
 
 /* It's media responsivness god damn fuck */
