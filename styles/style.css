@@ -28,7 +28,7 @@ a {
   background-color: #043873;
   min-height: 921px;
   position: relative;
-  background-image: url(/images/Element.svg);
+  background-image: url(../images/Element.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
