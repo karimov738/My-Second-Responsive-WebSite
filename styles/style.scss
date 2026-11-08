@@ -24,9 +24,13 @@ a {
     margin-inline: auto;
 }
 
+.px30 {
+    padding: 0 30px;
+}
+
 .hero {
     background-color: $Primmary-color;
-    height: 921px;
+    min-height: 921px;
     position: relative;
     background-image: url(/images/Element.svg);
     background-repeat: no-repeat;
@@ -61,7 +65,6 @@ a {
             color: #fff;
         }
     }
-
 }
 
 .navbar {
@@ -151,7 +154,7 @@ a {
 
         .project-head-text {
             font-weight: 700;
-            font-size: 72px;
+            font-size: 64px;
         }
 
         .project-main-text {
@@ -313,6 +316,7 @@ a {
     .plans-header {
         @include flexCenter();
         flex-direction: column;
+        text-align: center;
 
         .header-text {
             font-weight: 700;
@@ -323,6 +327,7 @@ a {
             font-weight: 400;
             font-size: 18px;
             margin-top: 24px;
+            max-width: 90%;
         }
     }
 
@@ -405,13 +410,12 @@ a {
 }
 
 .your-work {
-    padding: 140px 160px;
+    padding: 140px 0;
 }
 
 .your-work-content {
     @include flexCenter();
     flex-direction: column;
-    text-align: center;
     color: #fff;
 
     .your-work-header {
@@ -423,6 +427,7 @@ a {
         font-weight: 400;
         font-size: 18px;
         line-height: 30px;
+        text-align: center;
         @include margin-top24-bottom60();
     }
 
@@ -483,13 +488,17 @@ a {
 
     .sponsors-header {
         font-weight: 700;
-        font-size: 72px;
+        font-size: 64px;
         text-align: center;
     }
 
     .sponsors-logo {
         @include flexCenter;
         margin-top: 100px;
+
+        .s-logo {
+            max-width: 33%;
+        }
     }
 }
 
@@ -550,6 +559,7 @@ a {
         font-weight: 700;
         font-size: 70px;
         color: $Secondary-color;
+        text-align: center;
     }
 
     .clients-cards {
@@ -777,7 +787,7 @@ a {
             @include flexCenter();
             flex-direction: column;
             align-items: unset;
-            max-width: 17.5%;
+            max-width: 22%;
 
             .header {
                 font-weight: 700;
