@@ -12,6 +12,7 @@
     font-weight: 500;
     font-size: 18px;
     padding: 20px;
+    cursor: pointer;
 
     img {
         padding-left: 6px;
@@ -23,7 +24,13 @@
     margin-bottom: 60px;
 }
 
-@mixin padding-left-right-40 {
-    padding-left: 40px;
-    padding-right: 40px;
+@mixin btn-main-hover {
+    .btn-main :hover {
+        background-color: #072f5d;
+    }
 }
+
+// @mixin padding-left-right-40 {
+//     padding-left: 40px;
+//     padding-right: 40px;
+// }

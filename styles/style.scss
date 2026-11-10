@@ -83,7 +83,7 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    background: #202073;
+    background: $Primmary-color;
     padding-bottom: 20px;
 
     .logo span {
@@ -93,8 +93,7 @@ a {
 
 .navbar-content {
     @include flexCenter();
-    width: 82%;
-
+    width: 1440px;
 }
 
 .nav-buttons {
@@ -111,8 +110,6 @@ a {
     .btn-main {
         @include btnPrimary();
         margin-left: 24px;
-
-
     }
 }
 
@@ -129,30 +126,65 @@ nav {
     display: none;
     position: absolute;
     width: 100%;
-    background-color: #072f5d;
+    background-color: $Primmary-color;
     justify-content: flex-start;
     top: 100%;
     left: 0;
 
     .active {
-        display: flex;
+        display: none;
         padding: 15px 10px;
         flex-direction: column;
 
+        .log-btn,
+        .btn-main {
+            @include btnPrimary();
+            display: none;
+        }
+
+        .log-btn {
+            background-color: $Third-color;
+            color: $Primmary-color;
+            // @include padding-left-right-40
+        }
+
+        .btn-main {
+            margin-left: 16px;
+        }
+
         li {
             display: flex;
-            margin: 16px 20px;
+            margin: 0px 20px;
+            padding: 20px;
+            font-size: 20px;
 
             img {
                 padding-left: 8px;
             }
         }
+
+        .ham-buttons {
+            display: flex;
+            margin-left: 24px;
+
+            @include btn-main-hover();
+
+            // .log-btn:hover{
+            //     background-color: #4633d7;
+            //     color: $Third-color;
+            //     transition: 0.3s;
+            // }
+
+            
+
+            button {
+                font-size: 12px
+            }
+        }
     }
 }
 
-.show {
-    display: flex;
-}
+
 
 /* Showcase */
 
@@ -230,7 +262,7 @@ nav {
 
         .btn-main {
             @include btnPrimary();
-            @include padding-left-right-40();
+            // @include padding-left-right-40();
         }
 
     }
@@ -279,7 +311,7 @@ nav {
 
         .btn-main {
             @include btnPrimary;
-            @include padding-left-right-40
+            // @include padding-left-right-40
         }
 
     }
@@ -314,7 +346,7 @@ nav {
 
         .btn-main {
             @include btnPrimary();
-            @include padding-left-right-40();
+            // @include padding-left-right-40();
         }
 
     }
@@ -364,7 +396,7 @@ nav {
 
         .btn-main {
             @include btnPrimary();
-            @include padding-left-right-40();
+            // @include padding-left-right-40();
         }
     }
 }
@@ -444,7 +476,7 @@ nav {
                 color: $Secondary-color;
                 background-color: #fff;
                 border: 1px solid $Third-color;
-                @include padding-left-right-40();
+                // @include padding-left-right-40();
             }
         }
 
@@ -461,7 +493,7 @@ nav {
 
             .btn-main {
                 @include btnPrimary();
-                @include padding-left-right-40();
+                // @include padding-left-right-40();
             }
         }
     }
@@ -498,7 +530,7 @@ nav {
     .your-work-button {
         .btn-main {
             @include btnPrimary();
-            @include padding-left-right-40();
+            // @include padding-left-right-40();
         }
     }
 }
@@ -529,7 +561,7 @@ nav {
 
         .btn-main {
             @include btnPrimary;
-            @include padding-left-right-40;
+            // @include padding-left-right-40;
         }
     }
 
@@ -604,7 +636,7 @@ nav {
 
             .btn-main {
                 @include btnPrimary;
-                @include padding-left-right-40;
+                // @include padding-left-right-40;
             }
         }
 
@@ -713,10 +745,10 @@ nav {
 
     .dots {
         @include flexCenter();
-
         margin-top: 60px;
 
         .dot {
+            cursor: pointer;
             width: 12px;
             height: 12px;
             background-color: $Button-color;
@@ -774,7 +806,7 @@ nav {
 
             .btn-main {
                 @include btnPrimary();
-                @include padding-left-right-40();
+                // @include padding-left-right-40();
             }
         }
 
@@ -860,7 +892,7 @@ nav {
 
             .btn-main {
                 @include btnPrimary();
-                @include padding-left-right-40();
+                // @include padding-left-right-40();
             }
 
         }

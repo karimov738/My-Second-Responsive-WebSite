@@ -4,20 +4,44 @@
     .container {
         max-width: 1376px;
     }
+
+    .navbar {
+        .navbar-content {
+            width: 1340px;
+        }
+    }
 }
 
 @media (max-width: 1430px) {
     .container {
         max-width: 1280px;
     }
+
+    .navbar {
+        .navbar-content {
+            width: 1250px;
+        }
+    }
 }
 
 @media (max-width: 1370px) {
     .navbar {
-        // nav{
-        //     display: flex;
-        // }
-        
+        .navbar-content {
+            .show {
+                display: flex;
+                box-shadow: 1px 1px 10px 1px #202a62;
+
+                ul.active {
+                    display: flex;
+                    width: 100%;
+                }
+
+                ul li:hover {
+                    background-color: #202a62;
+                }
+            }
+        }
+
         .nav-right-content {
             .nav-links {
                 display: none;
@@ -26,6 +50,7 @@
             .hamburger {
                 display: flex;
                 margin-left: 20px;
+                cursor: pointer;
             }
         }
     }
@@ -35,16 +60,26 @@
     .container {
         max-width: 1180px;
     }
+
+    .navbar {
+        .navbar-content {
+            width: 1150px;
+        }
+    }
 }
 
-@media (max-width: 1260px) {}
+// @media (max-width: 1260px) {}
 
 @media (max-width: 1200px) {
     .container {
         max-width: 1100px;
     }
 
-
+    .navbar {
+        .navbar-content {
+            width: 1060px;
+        }
+    }
 
     .footer {
         .footer-low {
@@ -59,6 +94,18 @@
     .container {
         max-width: 1020px;
     }
+
+    .navbar {
+        .navbar-content {
+            width: 980px;
+
+            // ul.active {
+            //     display: flex;
+            // }
+        }
+    }
+
+
 
     .extension {
         .left-side {
@@ -85,6 +132,12 @@
 @media (max-width: 1060px) {
     .container {
         max-width: 990px;
+    }
+
+    .navbar {
+        .navbar-content {
+            width: 940px;
+        }
     }
 
     // .navbar {
@@ -327,6 +380,26 @@
 @media (max-width: 768px) {
     .container {
         max-width: 728px;
+    }
+
+    .navbar {
+        .navbar-content {
+            .nav-right-content {
+                .nav-buttons {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    nav {
+        .active {
+
+            .log-btn,
+            .btn-main {
+                display: flex;
+            }
+        }
     }
 
     .showcase {
@@ -578,7 +651,29 @@
     }
 }
 
+@media (max-width: 460px) {
+    .navbar {
+        .navbar-content {
+            .show {
+                .active {
+                    .btn-main {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 440px) {
+
+    // .navbar {
+    //     .navbar-content {
+    //         .nav-logo {
+    //             font-size: 18px;
+    //         }
+    //     }
+    // }
 
     .sponsors {
         .sponsors-header {
