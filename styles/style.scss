@@ -25,7 +25,7 @@ a {
 }
 
 .px30 {
-    padding: 0 30px;
+    padding: 0 20px;
 }
 
 .hero {
@@ -43,6 +43,11 @@ a {
     font-size: 28px;
     font-weight: 700;
     color: #fff;
+    display: flex;
+
+    span {
+        padding-left: 10px;
+    }
 }
 
 .navbar {
@@ -63,14 +68,33 @@ a {
             list-style-type: none;
             margin: 16px;
             color: #fff;
+
+            img {
+                padding-left: 8px;
+            }
         }
     }
 }
 
 .navbar {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #202073;
+    padding-bottom: 20px;
+
     .logo span {
         color: $Text-color;
     }
+}
+
+.navbar-content {
+    @include flexCenter();
+    width: 82%;
+
 }
 
 .nav-buttons {
@@ -87,7 +111,47 @@ a {
     .btn-main {
         @include btnPrimary();
         margin-left: 24px;
+
+
     }
+}
+
+.navbar {
+    .nav-right-content {
+        .hamburger {
+            display: none;
+            width: 40px;
+        }
+    }
+}
+
+nav {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: #072f5d;
+    justify-content: flex-start;
+    top: 100%;
+    left: 0;
+
+    .active {
+        display: flex;
+        padding: 15px 10px;
+        flex-direction: column;
+
+        li {
+            display: flex;
+            margin: 16px 20px;
+
+            img {
+                padding-left: 8px;
+            }
+        }
+    }
+}
+
+.show {
+    display: flex;
 }
 
 /* Showcase */
@@ -95,7 +159,7 @@ a {
 .showcase {
     @include flexCenter();
     color: #fff;
-    margin-top: 140px;
+    padding-top: 140px;
 }
 
 .left-side {

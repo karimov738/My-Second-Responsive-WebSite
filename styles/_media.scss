@@ -12,22 +12,39 @@
     }
 }
 
+@media (max-width: 1370px) {
+    .navbar {
+        // nav{
+        //     display: flex;
+        // }
+        
+        .nav-right-content {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
 @media (max-width: 1340px) {
     .container {
         max-width: 1180px;
     }
 }
 
-@media (max-width: 1260px) {
-    .container {
-        max-width: 1140px;
-    }
-}
+@media (max-width: 1260px) {}
 
 @media (max-width: 1200px) {
     .container {
         max-width: 1100px;
     }
+
+
 
     .footer {
         .footer-low {
@@ -70,17 +87,17 @@
         max-width: 990px;
     }
 
-    .navbar {
-        .nav-right-content {
-            flex-wrap: wrap; // ВРЕМЕННОЕ РЕШЕНИЕ!!!
+    // .navbar {
+    //     .nav-right-content {
+    //         flex-wrap: wrap; // ВРЕМЕННОЕ РЕШЕНИЕ!!!
 
-            .nav-links {
-                ul {
-                    flex-wrap: wrap; // ВРЕМЕННОЕ РЕШЕНИЕ!!!
-                }
-            }
-        }
-    }
+    //         .nav-links {
+    //             ul {
+    //                 flex-wrap: wrap; // ВРЕМЕННОЕ РЕШЕНИЕ!!!
+    //             }
+    //         }
+    //     }
+    // }
 
     .showcase {
         flex-direction: column;
@@ -581,6 +598,7 @@
         .whitepace-content {
             .whitepace-logos {
                 width: 62%;
+
                 .logo {
                     img {
                         max-width: 70%;

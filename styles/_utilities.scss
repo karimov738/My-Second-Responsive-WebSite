@@ -12,6 +12,10 @@
     font-weight: 500;
     font-size: 18px;
     padding: 20px;
+
+    img {
+        padding-left: 6px;
+    }
 }
 
 @mixin margin-top24-bottom60 {
