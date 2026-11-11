@@ -78,11 +78,14 @@ a {
   display: flex;
   justify-content: center;
   position: fixed;
-  top: 0;
   left: 0;
   width: 100%;
   background: #043873;
+  margin-top: 10px;
   padding-bottom: 20px;
+  box-shadow: 50px 5px 20px 1px #08274d;
+  border: 2px solid #1a4478;
+  border-radius: 50px;
 }
 .navbar .logo span {
   color: #fff;
@@ -93,6 +96,7 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 1440px;
+  padding-top: 10px;
 }
 
 .nav-buttons {
@@ -191,9 +195,6 @@ nav .active li img {
 nav .active .ham-buttons {
   display: flex;
   margin-left: 24px;
-}
-nav .active .ham-buttons .btn-main :hover {
-  background-color: #072f5d;
 }
 nav .active .ham-buttons button {
   font-size: 12px;
@@ -1010,14 +1011,21 @@ nav .active .ham-buttons button {
 @media (max-width: 1370px) {
   .navbar .navbar-content .show {
     display: flex;
-    box-shadow: 1px 1px 10px 1px #202a62;
+    box-shadow: 10px 5px 20px 1px #08274d;
+    border-radius: 60px;
+    border: 2px solid #1a4478;
+    margin: 10px 0;
   }
   .navbar .navbar-content .show ul.active {
     display: flex;
     width: 100%;
   }
-  .navbar .navbar-content .show ul li:hover {
-    background-color: #202a62;
+  .navbar .navbar-content .show ul.active .ham-links:hover {
+    background-color: #053369;
+  }
+  .navbar .navbar-content .show ul.active .ham-buttons {
+    padding: 20px 0 0 10px;
+    margin: 0 20px;
   }
   .navbar .nav-right-content .nav-links {
     display: none;
@@ -1369,6 +1377,15 @@ nav .active .ham-buttons button {
   }
   .try-whitepace .whitepace-content .whitepace-logos .logo img {
     max-width: 70%;
+  }
+}
+@media (max-width: 370px) {
+  .navbar .navbar-content .show .active .ham-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar .navbar-content .show .active .ham-buttons .btn-main {
+    margin: 20px 0;
   }
 }
 @media (max-width: 320px) {

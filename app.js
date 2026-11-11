@@ -24,6 +24,6 @@ function reportWindowSize() {
 
 window.onresize = reportWindowSize;
 
-navbar.addEventListener('scroll', function () {
-    navbar.classList.add('box-shadow')
-})
+// navbar.addEventListener('scroll', function () {
+//     navbar.classList.add('box-shadow')
+// })

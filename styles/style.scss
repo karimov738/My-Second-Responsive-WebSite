@@ -80,11 +80,14 @@ a {
     display: flex;
     justify-content: center;
     position: fixed;
-    top: 0;
     left: 0;
     width: 100%;
     background: $Primmary-color;
+    margin-top: 10px;
     padding-bottom: 20px;
+    box-shadow: 50px 5px 20px 1px #08274d;
+    border: 2px solid #1a4478;
+    border-radius: 50px;
 
     .logo span {
         color: $Text-color;
@@ -94,6 +97,7 @@ a {
 .navbar-content {
     @include flexCenter();
     width: 1440px;
+    padding-top: 10px;
 }
 
 .nav-buttons {
@@ -167,15 +171,11 @@ nav {
             display: flex;
             margin-left: 24px;
 
-            @include btn-main-hover();
-
             // .log-btn:hover{
             //     background-color: #4633d7;
             //     color: $Third-color;
             //     transition: 0.3s;
             // }
-
-            
 
             button {
                 font-size: 12px

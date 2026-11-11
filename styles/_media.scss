@@ -29,16 +29,27 @@
         .navbar-content {
             .show {
                 display: flex;
-                box-shadow: 1px 1px 10px 1px #202a62;
+                box-shadow: 10px 5px 20px 1px #08274d;
+                border-radius: 60px;
+                border: 2px solid #1a4478;
+                margin: 10px 0;
+                
 
                 ul.active {
                     display: flex;
                     width: 100%;
+
+                    .ham-links:hover {
+                        background-color: #053369;
+                    }
+
+                    .ham-buttons {
+                        padding: 20px 0 0 10px;
+                        margin: 0 20px;
+                    }
                 }
 
-                ul li:hover {
-                    background-color: #202a62;
-                }
+
             }
         }
 
@@ -702,8 +713,26 @@
             }
         }
     }
+}
 
+@media (max-width: 370px) {
+    .navbar {
+        .navbar-content {
+            .show {
+                .active {
+                    .ham-buttons {
 
+                        display: flex;
+                        flex-direction: column;
+
+                        .btn-main {
+                            margin: 20px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 320px) {
