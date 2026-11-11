@@ -161,6 +161,7 @@ nav {
             margin: 0px 20px;
             padding: 20px;
             font-size: 20px;
+            justify-content: space-between;
 
             img {
                 padding-left: 8px;
@@ -428,16 +429,34 @@ nav {
     }
 
     .plans-cards {
-        @include flexCenter();
-        margin-top: 63px;
+        border: 5px solid var(--clr-primary-5);
+        width: 80vw;
+        margin: 0 auto;
+        height: 60vh;
+        max-width: 600px;
+        position: relative;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        margin-top: 4rem;
+        z-index: -1;
+
+        .plan-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: var(--clr-primary-9);
+            place-items: center;
+            transition: all 0.25s ease-in-out;
+        }
 
         .card {
-            max-width: 472px;
             border: 1px solid $Third-color;
             border-radius: 10px;
             padding: 40px 44px;
 
             .card-header {
+                text-align: center;
+
                 .sub-type {
                     font-weight: 600;
                     font-size: 24px;
@@ -483,9 +502,7 @@ nav {
         .blue-card {
             background-color: $Primmary-color;
             color: #fff;
-            margin-left: 32px;
-            margin-right: 32px;
-            padding: 80px 44px;
+            padding: 40px 44px;
 
             .sub-price {
                 color: $Third-color;
@@ -495,6 +512,26 @@ nav {
                 @include btnPrimary();
                 // @include padding-left-right-40();
             }
+        }
+
+    }
+
+    .plan-slide-btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 0.75rem;
+
+        .prevPlan,
+        .nextPlan {
+            background: transparent;
+            border-color: transparent;
+            font-size: 1.75rem;
+            cursor: pointer;
+            margin: 0 0.25rem;
+            text-transform: capitalize;
+            letter-spacing: 2px;
+            color: var(--clr-grey-5);
+            transition: var(--transition);
         }
     }
 }
@@ -659,8 +696,27 @@ nav {
     }
 
     .clients-cards {
-        @include flexCenter();
-        margin-top: 60px;
+        border: 5px solid var(--clr-primary-5);
+        width: 80vw;
+        margin: 0 auto;
+        height: 40vh;
+        max-width: 80rem;
+        position: relative;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        margin-top: 4rem;
+        z-index: -1;
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: var(--clr-primary-9);
+            display: grid;
+            place-items: center;
+            transition: all 0.25s ease-in-out;
+            text-align: center;
+        }
 
         .card:first-child {
             background-color: #fff;
@@ -668,14 +724,15 @@ nav {
             color: $Secondary-color;
         }
 
-        .card {
-            max-width: 32%;
-            padding: 60px 40px;
+        .c-card {
+            padding: 20px 40px;
             border-radius: 10px;
             background-color: $Button-color;
+            width: 95%;
+            margin: 0px 10px;
 
             .card-top {
-                padding-bottom: 40px;
+                padding-bottom: 30px;
                 border-bottom: 1px solid $Secondary-color;
 
                 .card-text {
@@ -688,7 +745,7 @@ nav {
 
             .our-client {
                 @include flexCenter();
-                margin-top: 60px;
+                padding: 20px 0;
 
                 .avatar {
                     max-width: 25%;
@@ -743,24 +800,43 @@ nav {
 
     }
 
-    .dots {
-        @include flexCenter();
-        margin-top: 60px;
+    .slider-buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 0.75rem;
 
-        .dot {
+        .prevBtn,
+        .nextBtn {
+            background: transparent;
+            border-color: transparent;
+            font-size: 1.75rem;
             cursor: pointer;
-            width: 12px;
-            height: 12px;
-            background-color: $Button-color;
-            border-radius: 50%;
-
-        }
-
-        .dot:nth-child(2) {
-            background-color: $Primmary-color;
-            margin: 0 12px;
+            margin: 0 0.25rem;
+            text-transform: capitalize;
+            letter-spacing: 2px;
+            color: var(--clr-grey-5);
+            transition: var(--transition);
         }
     }
+
+    // .dots {
+    //     @include flexCenter();
+    //     margin-top: 60px;
+
+    //     .dot {
+    //         cursor: pointer;
+    //         width: 12px;
+    //         height: 12px;
+    //         background-color: $Button-color;
+    //         border-radius: 50%;
+
+    //     }
+
+    //     .dot:nth-child(2) {
+    //         background-color: $Primmary-color;
+    //         margin: 0 12px;
+    //     }
+    // }
 }
 
 // ======== Footer section =======

@@ -33,7 +33,7 @@
                 border-radius: 60px;
                 border: 2px solid #1a4478;
                 margin: 10px 0;
-                
+
 
                 ul.active {
                     display: flex;
@@ -295,6 +295,12 @@
 @media (max-width: 952px) {
     .container {
         max-width: 920px;
+    }
+
+    .plans {
+        .plans-cards {
+            height: 64vh;
+        }
     }
 
     .plans-cards,
@@ -565,6 +571,13 @@
 }
 
 @media (max-width: 620px) {
+
+    .plans {
+        .plans-cards {
+            height: 68vh;
+        }
+    }
+
     .try-whitepace {
         .whitepace-content {
             .whitepace-logos {
@@ -662,6 +675,30 @@
     }
 }
 
+@media (max-width: 500px) {
+    .clients {
+        .clients-cards {
+            height: 46vh;
+        }
+    }
+
+    .navbar {
+        .navbar-content {
+            .nav-logo {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 470px) {
+    .plans {
+        .plans-cards {
+            height: 72vh;
+        }
+    }
+}
+
 @media (max-width: 460px) {
     .navbar {
         .navbar-content {
@@ -685,6 +722,12 @@
     //         }
     //     }
     // }
+
+    .plans {
+        .plans-cards {
+            height: 76vh;
+        }
+    }
 
     .sponsors {
         .sponsors-header {
@@ -715,6 +758,22 @@
     }
 }
 
+@media (max-width: 410px){
+    .plans {
+        .plans-cards {
+            height: 82vh;
+        }
+    }
+}
+
+@media (max-width: 390px){
+    .plans {
+        .plans-cards {
+            height: 92vh;
+        }
+    }
+}
+
 @media (max-width: 370px) {
     .navbar {
         .navbar-content {
@@ -733,12 +792,33 @@
             }
         }
     }
+
+    .clients {
+        .clients-cards {
+            height: 50vh;
+        }
+    }
+}
+
+@media (max-width: 330px) {
+    .clients {
+        .clients-cards {
+            height: 54vh;
+        }
+    }
 }
 
 @media (max-width: 320px) {
 
-    .container {
-        max-width: 288px;
+    // .container {
+    //     max-width: 288px;
+    // }
+
+
+    .clients {
+        .clients-cards {
+            height: 56vh;
+        }
     }
 
     // .try-whitepace {
