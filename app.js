@@ -4,6 +4,13 @@
 let btn = document.querySelector('.hamburger')
 let navbar = document.querySelector('nav')
 let ul = document.querySelector('nav ul')
+let headerTop = document.querySelector('.navbar')
+
+// debugger
+
+/*  box-shadow: 50px 5px 20px 1px #08274d;
+    border: 2px solid #1a4478;
+*/
 btn.addEventListener('click', function () {
     // navbar.style.display = "flex"
 
@@ -18,6 +25,23 @@ btn.addEventListener('click', function () {
     // }
 })
 
+window.addEventListener('scroll', function () {     // при каждом скроле роликом мыши, выполняется эта функция 
+
+   if (window.scrollY > 0) {
+        headerTop.style.boxShadow = '0px 5px 20px 1px #08274d';
+    } else {                                                            
+        headerTop.style.boxShadow = 'none';
+    }
+
+    // const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+
+    // headerTop.classList.toggle('nav-box-shadow')
+
+
+
+
+})
+
 function reportWindowSize() {
     if (window.innerWidth > 1370) {
         navbar.classList.remove('show')
@@ -26,10 +50,6 @@ function reportWindowSize() {
 }
 
 window.onresize = reportWindowSize;
-
-// navbar.addEventListener('scroll', function () {
-//     navbar.classList.add('box-shadow')
-// })
 
 
 // ========== Our-clients Slider code ===========

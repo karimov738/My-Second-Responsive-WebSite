@@ -78,17 +78,20 @@ a {
   display: flex;
   justify-content: center;
   position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
   background: #043873;
-  margin-top: 10px;
   padding-bottom: 20px;
-  box-shadow: 50px 5px 20px 1px #08274d;
-  border: 2px solid #1a4478;
-  border-radius: 50px;
+  padding: 0 30px;
 }
 .navbar .logo span {
   color: #fff;
+}
+
+.nav-box-shadow {
+  box-shadow: 50px 5px 20px 1px #08274d;
+  transition: 1ms;
 }
 
 .navbar-content {
@@ -189,6 +192,7 @@ nav .active li {
   padding: 20px;
   font-size: 20px;
   justify-content: space-between;
+  cursor: pointer;
 }
 nav .active li img {
   padding-left: 8px;
@@ -1060,10 +1064,6 @@ nav .active .ham-buttons button {
 @media (max-width: 1370px) {
   .navbar .navbar-content .show {
     display: flex;
-    box-shadow: 10px 5px 20px 1px #08274d;
-    border-radius: 60px;
-    border: 2px solid #1a4478;
-    margin: 10px 0;
   }
   .navbar .navbar-content .show ul.active {
     display: flex;
