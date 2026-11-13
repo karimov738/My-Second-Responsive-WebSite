@@ -826,6 +826,7 @@ nav {
 
     .dots {
         @include flexCenter();
+        display: none;
         margin-top: 60px;
         gap: 10px;
 
@@ -838,10 +839,10 @@ nav {
 
         }
 
-        .dot:nth-child(2) {
-            // background-color: $Primmary-color;
-            // margin: 0 12px;
-        }
+        // .dot:nth-child(2) {
+        //     // background-color: $Primmary-color;
+        //     // margin: 0 12px;
+        // }
     }
 }
 

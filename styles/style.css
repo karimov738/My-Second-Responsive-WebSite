@@ -868,6 +868,7 @@ nav .active .ham-buttons button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  display: none;
   margin-top: 60px;
   gap: 10px;
 }
@@ -878,6 +879,7 @@ nav .active .ham-buttons button {
   background-color: #4F9CF9;
   border-radius: 50%;
 }
+
 .footer-bg {
   background-color: #043873;
 }
@@ -1349,6 +1351,9 @@ nav .active .ham-buttons button {
     height: 100%;
     transition: all 0.25s ease-in-out;
     text-align: center;
+  }
+  .clients .dots {
+    display: flex;
   }
   .footer-bg .try-whitepace .whitepace-content .whitepace-top .whitepace-header {
     font-size: 54px;
