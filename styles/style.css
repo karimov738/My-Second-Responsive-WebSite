@@ -82,7 +82,7 @@ a {
   left: 0;
   width: 100%;
   background: #043873;
-  padding-bottom: 20px;
+  padding-bottom: 20px !important;
   padding: 0 30px;
 }
 .navbar .logo span {
@@ -103,7 +103,7 @@ a {
 }
 
 .nav-buttons {
-  margin-left: 60px;
+  margin-left: 50px;
 }
 .nav-buttons .log-btn {
   border: none;
@@ -767,26 +767,21 @@ nav .active .ham-buttons button {
   text-align: center;
 }
 .clients .clients-cards {
-  border: 5px solid var(--clr-primary-5);
-  width: 80vw;
-  margin: 0 auto;
-  height: 40vh;
-  max-width: 80rem;
-  position: relative;
+  /* position: relative; */
+  display: flex;
+  flex-direction: row;
+  /* width: 80vw; */
+  max-width: 94%;
+  /* margin: 0 auto; */
+  /* height: 46vh; */
   border-radius: 0.5rem;
-  overflow: hidden;
+  /* overflow: hidden; */
   margin-top: 4rem;
-  z-index: -1;
+  /* z-index: -1; */
+  border: 5px solid var(--clr-primary-5);
 }
 .clients .clients-cards .slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: var(--clr-primary-9);
-  display: grid;
-  place-items: center;
-  transition: all 0.25s ease-in-out;
-  text-align: center;
+  /* position: absolute; */
 }
 .clients .clients-cards .card:first-child {
   background-color: #fff;
@@ -794,10 +789,10 @@ nav .active .ham-buttons button {
   color: #212529;
 }
 .clients .clients-cards .c-card {
-  padding: 20px 40px;
+  padding: 20px 20px 0;
   border-radius: 10px;
   background-color: #4F9CF9;
-  width: 95%;
+  max-width: 471px;
   margin: 0px 10px;
 }
 .clients .clients-cards .c-card .card-top {
@@ -869,7 +864,20 @@ nav .active .ham-buttons button {
   color: var(--clr-grey-5);
   transition: var(--transition);
 }
-
+.clients .dots {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  gap: 10px;
+}
+.clients .dots .dot {
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  background-color: #4F9CF9;
+  border-radius: 50%;
+}
 .footer-bg {
   background-color: #043873;
 }
@@ -1230,12 +1238,7 @@ nav .active .ham-buttons button {
   .plans .plans-cards {
     height: 64vh;
   }
-  .plans-cards,
-  .clients-cards {
-    flex-direction: column;
-  }
-  .plans-cards .card,
-  .clients-cards .card {
+  .plans-cards .card {
     margin-top: 40px;
   }
   .try-whitepace {
@@ -1322,6 +1325,30 @@ nav .active .ham-buttons button {
   }
   .clients .clients-header {
     font-size: 54px;
+  }
+  .clients .clients-cards {
+    position: relative;
+    display: flex;
+    width: 80vw;
+    max-width: 94%;
+    /* margin: 0 auto; */
+    height: 40vh;
+    overflow: hidden;
+    z-index: -1;
+  }
+  .clients .clients-cards .c-card {
+    padding: 20px 40px 0;
+    border-radius: 10px;
+    background-color: #4F9CF9;
+    max-width: 471px;
+    margin: 0px 10px;
+  }
+  .clients .clients-cards .slide {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    transition: all 0.25s ease-in-out;
+    text-align: center;
   }
   .footer-bg .try-whitepace .whitepace-content .whitepace-top .whitepace-header {
     font-size: 54px;

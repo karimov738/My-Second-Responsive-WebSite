@@ -19,19 +19,22 @@ btn.addEventListener('click', function () {
     navbar.classList.toggle('show')
 
     // if('click'){
-    //     navbar.style.display="flex"
     // }else{
     //     navbar.style.display="none"
+    //     navbar.style.display="flex"
     // }
 })
 
 window.addEventListener('scroll', function () {     // при каждом скроле роликом мыши, выполняется эта функция 
 
-   if (window.scrollY > 0) {
+    if (window.scrollY > 0) {
         headerTop.style.boxShadow = '0px 5px 20px 1px #08274d';
-    } else {                                                            
+        navbar.style.boxShadow = '0px 5px 20px 1px #08274d';
+    } else {
         headerTop.style.boxShadow = 'none';
+        // navbar.style.boxShadow = 'none';
     }
+
 
     // const scrollTop = window.pageYOffset || document.documentElement.scrollTop
 
@@ -47,62 +50,54 @@ function reportWindowSize() {
         navbar.classList.remove('show')
         ul.classList.remove('active');
     }
+
+    // clientsWidthSize()
 }
 
 window.onresize = reportWindowSize;
 
 
-// ========== Our-clients Slider code ===========
+// ============ Our-clients Slider code ===============
+const slides = document.querySelectorAll('.slide');
+const button = document.querySelector('.dots');
 
-const slides = document.querySelectorAll('.slide')
-const btnPrev = document.querySelector('.prevBtn')
-const btnNext = document.querySelector('.nextBtn')
-
+// Расставляем карточки
 slides.forEach(function (slide, index) {
-    slide.style.left = `${index * 100}%`
-})
+    slide.style.left = `${index * 100}%`;
+});
 
-let counter = 0
+// Генерируем точки автоматически
+let result = '';
 
-btnNext.addEventListener("click", function () {
-    counter++
-    carousel()
-})
-
-btnPrev.addEventListener("click", function () {
-    counter--
-    carousel()
-})
-
-function carousel() {
-
-    if (counter < slides.length - 1) {
-        btnNext.style.display = "block"
-    } else {
-        btnNext.style.display = "none"
-    }
-
-    if (counter > 0) {
-        btnPrev.style.display = "block"
-    } else {
-        btnPrev.style.display = "none"
-    }
-
-    // slides.forEach(function (slide) {
-    //     slide.style.transform = `translateX(-${counter * 100}%)`     // but its also true
-    // })
-
-    slides.forEach(function (slide, index) {
-        // counter = 1 | index = 0 | left = 0 => left = -100%    // its more good way 
-        slide.style.left = `${(-1 * counter + index) * 100}%`
-    })
-
-    // slides.forEach(function (slide) {
-    //     slide.style.transform = `translateX(-${counter * 100}%)`     // but its also true
-    // })
+for (let i = 0; i < slides.length; i++) {
+    result += `<div class="dot" data-index="${i}"></div>`;
 }
 
-btnPrev.style.display = "none";
+button.innerHTML = result;
+
+const dots = document.querySelectorAll('.dot');
+
+button.addEventListener('click', function (e) {
+
+    if (e.target.classList.contains('dot')) {
+
+        const index = Number(e.target.dataset.index);
+
+        slides.forEach(function (slide, slideIndex) {
+
+            slide.style.left = `${(slideIndex - index) * 100}%`;
+
+        });
+
+        dots.forEach(function (dot) {
+            dot.classList.remove('active');
+        });
+
+        e.target.classList.add('active');
+    }
+
+});
+
 
 
 // ============== Plans Slider code ================
@@ -128,7 +123,7 @@ prevPlan.addEventListener("click", function () {
 })
 
 function pCarousel() {
-    if (pCounter < slides.length - 1) {
+    if (pCounter < planSlides.length - 1) {
         nextPlan.style.display = "block"
     } else {
         nextPlan.style.display = "none"

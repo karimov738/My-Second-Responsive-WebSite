@@ -84,7 +84,7 @@ a {
     left: 0;
     width: 100%;
     background: $Primmary-color;
-    padding-bottom: 20px;
+    padding-bottom: 20px !important;
     padding: 0 30px;
 
     .logo span {
@@ -104,7 +104,7 @@ a {
 }
 
 .nav-buttons {
-    margin-left: 60px;
+    margin-left: 50px;
 
     .log-btn {
         @include btnPrimary();
@@ -700,26 +700,27 @@ nav {
     }
 
     .clients-cards {
-        border: 5px solid var(--clr-primary-5);
-        width: 80vw;
-        margin: 0 auto;
-        height: 40vh;
-        max-width: 80rem;
-        position: relative;
+        /* position: relative; */
+        display: flex;
+        flex-direction: row;
+        /* width: 80vw; */
+        max-width: 94%;
+        /* margin: 0 auto; */
+        /* height: 46vh; */
         border-radius: 0.5rem;
-        overflow: hidden;
+        /* overflow: hidden; */
         margin-top: 4rem;
-        z-index: -1;
+        /* z-index: -1; */
+
+        border: 5px solid var(--clr-primary-5);
 
         .slide {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: var(--clr-primary-9);
-            display: grid;
-            place-items: center;
-            transition: all 0.25s ease-in-out;
-            text-align: center;
+            /* position: absolute; */
+            // width: 32%;
+            // height: 100%;
+            // background: var(--clr-primary-9);
+            // transition: all 0.25s ease-in-out;
+            // text-align: center;
         }
 
         .card:first-child {
@@ -729,10 +730,10 @@ nav {
         }
 
         .c-card {
-            padding: 20px 40px;
+            padding: 20px 20px 0;
             border-radius: 10px;
-            background-color: $Button-color;
-            width: 95%;
+            background-color: #4F9CF9;
+            max-width: 471px;
             margin: 0px 10px;
 
             .card-top {
@@ -823,24 +824,25 @@ nav {
         }
     }
 
-    // .dots {
-    //     @include flexCenter();
-    //     margin-top: 60px;
+    .dots {
+        @include flexCenter();
+        margin-top: 60px;
+        gap: 10px;
 
-    //     .dot {
-    //         cursor: pointer;
-    //         width: 12px;
-    //         height: 12px;
-    //         background-color: $Button-color;
-    //         border-radius: 50%;
+        .dot {
+            cursor: pointer;
+            width: 12px;
+            height: 12px;
+            background-color: $Button-color;
+            border-radius: 50%;
 
-    //     }
+        }
 
-    //     .dot:nth-child(2) {
-    //         background-color: $Primmary-color;
-    //         margin: 0 12px;
-    //     }
-    // }
+        .dot:nth-child(2) {
+            // background-color: $Primmary-color;
+            // margin: 0 12px;
+        }
+    }
 }
 
 // ======== Footer section =======

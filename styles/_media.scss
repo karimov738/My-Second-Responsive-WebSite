@@ -298,12 +298,10 @@
         }
     }
 
-    .plans-cards,
-    .clients-cards {
-        flex-direction: column;
+    .plans-cards    {
 
         .card {
-            // ВРЕМЕННОЕ РЕШЕНИЕ !!!
+                                // ВРЕМЕННОЕ РЕШЕНИЕ !!!
             margin-top: 40px;
         }
     }
@@ -457,6 +455,35 @@
     .clients {
         .clients-header {
             font-size: 54px;
+        }
+    }
+
+    .clients {
+        .clients-cards {
+            position: relative;
+            display: flex;
+            width: 80vw;
+            max-width: 94%;
+            /* margin: 0 auto; */
+            height: 40vh;
+            overflow: hidden;
+            z-index: -1;
+
+            .c-card {
+                padding: 20px 40px 0;
+                border-radius: 10px;
+                background-color: #4F9CF9;
+                max-width: 471px;
+                margin: 0px 10px;
+            }
+
+            .slide {
+                position: absolute;
+                width: 90%;
+                height: 100%;
+                transition: all 0.25s ease-in-out;
+                text-align: center;
+            }
         }
     }
 
@@ -753,7 +780,7 @@
     }
 }
 
-@media (max-width: 410px){
+@media (max-width: 410px) {
     .plans {
         .plans-cards {
             height: 82vh;
@@ -761,7 +788,7 @@
     }
 }
 
-@media (max-width: 390px){
+@media (max-width: 390px) {
     .plans {
         .plans-cards {
             height: 92vh;
