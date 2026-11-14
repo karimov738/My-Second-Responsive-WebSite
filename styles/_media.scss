@@ -298,10 +298,10 @@
         }
     }
 
-    .plans-cards    {
+    .plans-cards {
 
         .card {
-                                // ВРЕМЕННОЕ РЕШЕНИЕ !!!
+            // ВРЕМЕННОЕ РЕШЕНИЕ !!!
             margin-top: 40px;
         }
     }
@@ -486,7 +486,7 @@
             }
         }
 
-        .dots{
+        .dots {
             display: flex;
         }
     }
@@ -821,7 +821,23 @@
 
     .clients {
         .clients-cards {
-            height: 50vh;
+            height: 52vh;
+
+            .c-card {
+                .our-client {
+                    .avatar {
+                        max-width: 40%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .clients {
+        .clients-cards {
+            height: 54vh;
         }
     }
 }
@@ -829,7 +845,7 @@
 @media (max-width: 330px) {
     .clients {
         .clients-cards {
-            height: 54vh;
+            height: 58vh;
         }
     }
 }

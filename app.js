@@ -58,15 +58,14 @@ window.onresize = reportWindowSize;
 
 
 // ============ Our-clients Slider code ===============
+
 const slides = document.querySelectorAll('.slide');
 const button = document.querySelector('.dots');
 
-// Расставляем карточки
 slides.forEach(function (slide, index) {
     slide.style.left = `${index * 100}%`;
 });
 
-// Генерируем точки автоматически
 let result = '';
 
 for (let i = 0; i < slides.length; i++) {
