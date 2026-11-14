@@ -461,9 +461,7 @@
     .clients {
         .clients-cards {
             position: relative;
-            display: flex;
             width: 80vw;
-            max-width: 94%;
             /* margin: 0 auto; */
             height: 40vh;
             overflow: hidden;
@@ -473,8 +471,8 @@
                 padding: 20px 40px 0;
                 border-radius: 10px;
                 background-color: #4F9CF9;
-                max-width: 471px;
-                margin: 0px 10px;
+                max-width: 533px;
+                margin: 0px 20px;
             }
 
             .slide {
