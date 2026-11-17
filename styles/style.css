@@ -462,6 +462,16 @@ nav .active .ham-buttons button {
   padding: 140px 0;
   color: #212529;
 }
+.plans .dots {
+  display: flex;
+}
+.plans .dots .dot {
+  background-color: #fff;
+  border: 3px solid #FFE492;
+}
+.plans .dots .active {
+  border: 3px solid #ffbf00;
+}
 .plans .plans-header {
   display: flex;
   justify-content: space-between;
@@ -480,29 +490,27 @@ nav .active .ham-buttons button {
   max-width: 90%;
 }
 .plans .plans-cards {
-  border: 5px solid var(--clr-primary-5);
   width: 80vw;
   margin: 0 auto;
-  height: 60vh;
   max-width: 600px;
   position: relative;
-  border-radius: 0.5rem;
+  border-radius: 10px;
   overflow: hidden;
-  margin-top: 4rem;
+  margin-top: 40px;
   z-index: -1;
+  height: 630px;
 }
 .plans .plans-cards .plan-slide {
   position: absolute;
   width: 100%;
-  height: 100%;
-  background: var(--clr-primary-9);
   place-items: center;
   transition: all 0.25s ease-in-out;
 }
 .plans .plans-cards .card {
   border: 1px solid #FFE492;
   border-radius: 10px;
-  padding: 40px 44px;
+  padding: 20px 44px;
+  min-height: 600px;
 }
 .plans .plans-cards .card .card-header {
   text-align: center;
@@ -767,17 +775,11 @@ nav .active .ham-buttons button {
   text-align: center;
 }
 .clients .clients-cards {
-  /* position: relative; */
   display: flex;
   flex-direction: row;
-  /* width: 80vw; */
   max-width: 94%;
-  /* margin: 0 auto; */
-  /* height: 46vh; */
   border-radius: 0.5rem;
-  /* overflow: hidden; */
   margin-top: 4rem;
-  /* z-index: -1; */
 }
 .clients .clients-cards .card:first-child {
   background-color: #fff;
@@ -843,15 +845,19 @@ nav .active .ham-buttons button {
 .clients .clients-cards .card:first-child .our-client .client-description .description-text {
   color: #212529;
 }
-.clients .dots {
+.clients .active {
+  border: 3px solid #2066bb;
+}
+
+.dots {
   display: flex;
   justify-content: space-between;
   align-items: center;
   display: none;
-  margin-top: 60px;
+  margin-top: 20px;
   gap: 10px;
 }
-.clients .dots .dot {
+.dots .dot {
   cursor: pointer;
   width: 12px;
   height: 12px;
@@ -1216,9 +1222,6 @@ nav .active .ham-buttons button {
   .container {
     max-width: 920px;
   }
-  .plans .plans-cards {
-    height: 64vh;
-  }
   .try-whitepace {
     margin-inline: 0;
   }
@@ -1292,9 +1295,6 @@ nav .active .ham-buttons button {
   .custom .right-side .custom-header {
     font-size: 54px;
   }
-  .plans .plans-header .header-text {
-    font-size: 54px;
-  }
   .sponsors .sponsors-header {
     font-size: 54px;
   }
@@ -1307,8 +1307,7 @@ nav .active .ham-buttons button {
   .clients .clients-cards {
     position: relative;
     width: 80vw;
-    /* margin: 0 auto; */
-    height: 40vh;
+    height: 500px;
     overflow: hidden;
     z-index: -1;
   }
@@ -1322,11 +1321,10 @@ nav .active .ham-buttons button {
   .clients .clients-cards .slide {
     position: absolute;
     width: 90%;
-    height: 100%;
     transition: all 0.25s ease-in-out;
     text-align: center;
   }
-  .clients .dots {
+  .dots {
     display: flex;
   }
   .footer-bg .try-whitepace .whitepace-content .whitepace-top .whitepace-header {
@@ -1377,7 +1375,7 @@ nav .active .ham-buttons button {
 }
 @media (max-width: 620px) {
   .plans .plans-cards {
-    height: 68vh;
+    height: 620px;
   }
   .try-whitepace .whitepace-content .whitepace-logos .logo img {
     max-width: 88%;
@@ -1422,26 +1420,27 @@ nav .active .ham-buttons button {
   }
 }
 @media (max-width: 500px) {
+  .plans .plans-cards {
+    height: 660px;
+  }
   .clients .clients-cards {
-    height: 46vh;
+    height: 540px;
   }
   .navbar .navbar-content .nav-logo {
     font-size: 20px;
   }
 }
 @media (max-width: 470px) {
-  .plans .plans-cards {
-    height: 72vh;
-  }
-}
-@media (max-width: 460px) {
   .navbar .navbar-content .show .active .btn-main {
     margin-left: 10px;
+  }
+  .clients .clients-cards {
+    height: 540px;
   }
 }
 @media (max-width: 440px) {
   .plans .plans-cards {
-    height: 76vh;
+    height: 720px;
   }
   .sponsors .sponsors-header {
     font-size: 36px;
@@ -1458,12 +1457,12 @@ nav .active .ham-buttons button {
 }
 @media (max-width: 410px) {
   .plans .plans-cards {
-    height: 82vh;
+    height: 790px;
   }
 }
 @media (max-width: 390px) {
   .plans .plans-cards {
-    height: 92vh;
+    height: 820px;
   }
 }
 @media (max-width: 370px) {
@@ -1475,24 +1474,27 @@ nav .active .ham-buttons button {
     margin: 20px 0;
   }
   .clients .clients-cards {
-    height: 52vh;
+    height: 550px;
   }
   .clients .clients-cards .c-card .our-client .avatar {
     max-width: 40%;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 340px) {
+  .plans .plans-cards {
+    height: 850px;
+  }
   .clients .clients-cards {
-    height: 54vh;
+    height: 600px;
   }
 }
 @media (max-width: 330px) {
-  .clients .clients-cards {
-    height: 58vh;
+  .plans .plans-cards {
+    height: 900px;
   }
 }
 @media (max-width: 320px) {
-  .clients .clients-cards {
-    height: 56vh;
+  .plans .plans-cards {
+    height: 980px;
   }
 }/*# sourceMappingURL=style.css.map */

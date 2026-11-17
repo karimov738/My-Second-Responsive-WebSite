@@ -8,41 +8,20 @@ let headerTop = document.querySelector('.navbar')
 
 // debugger
 
-/*  box-shadow: 50px 5px 20px 1px #08274d;
-    border: 2px solid #1a4478;
-*/
 btn.addEventListener('click', function () {
-    // navbar.style.display = "flex"
 
     ul.classList.toggle('active')
-    // navbar.style.display='flex';
     navbar.classList.toggle('show')
-
-    // if('click'){
-    // }else{
-    //     navbar.style.display="none"
-    //     navbar.style.display="flex"
-    // }
 })
 
 window.addEventListener('scroll', function () {     // при каждом скроле роликом мыши, выполняется эта функция 
 
     if (window.scrollY > 0) {
         headerTop.style.boxShadow = '0px 5px 20px 1px #08274d';
-        navbar.style.boxShadow = '0px 5px 20px 1px #08274d';
+        navbar.style.boxShadow = '0px 5px 20px -10px #08274d';
     } else {
         headerTop.style.boxShadow = 'none';
-        // navbar.style.boxShadow = 'none';
     }
-
-
-    // const scrollTop = window.pageYOffset || document.documentElement.scrollTop
-
-    // headerTop.classList.toggle('nav-box-shadow')
-
-
-
-
 })
 
 function reportWindowSize() {
@@ -50,94 +29,141 @@ function reportWindowSize() {
         navbar.classList.remove('show')
         ul.classList.remove('active');
     }
-
-    // clientsWidthSize()
 }
 
 window.onresize = reportWindowSize;
 
-
 // ============ Our-clients Slider code ===============
 
 const slides = document.querySelectorAll('.slide');
-const button = document.querySelector('.dots');
+const dotsContainer = document.querySelector('.clients .dots');
 
 slides.forEach(function (slide, index) {
-    slide.style.left = `${index * 100}%`;
+    slide.style.left = `${index * 100}%`
 });
 
-let result = '';
+generateSlideBtns(slides, dotsContainer, 'index')
 
-for (let i = 0; i < slides.length; i++) {
-    result += `<div class="dot" data-index="${i}"></div>`;
-}
+const dots = document.querySelectorAll('.dot')
 
-button.innerHTML = result;
+let cDot = document.querySelectorAll('.dot')
+cDot[0].classList.add('active')
 
-const dots = document.querySelectorAll('.dot');
-
-button.addEventListener('click', function (e) {
-
-    if (e.target.classList.contains('dot')) {
-
-        const index = Number(e.target.dataset.index);
-
-        slides.forEach(function (slide, slideIndex) {
-
-            slide.style.left = `${(slideIndex - index) * 100}%`;
-
-        });
-
-        dots.forEach(function (dot) {
-            dot.classList.remove('active');
-        });
-
-        e.target.classList.add('active');
-    }
-
-});
+// dotsContainer.addEventListener('click', function (event) {
+//     clickBtn(event)
+// })
 
 
+dotsContainer.addEventListener('click', (event) => clickBtn(event, slides, dots))
 
-// ============== Plans Slider code ================
+// ============== PLANS SLIDER CODE ================
 
 const planSlides = document.querySelectorAll('.plan-slide')
-const prevPlan = document.querySelector('.prevPlan')
-const nextPlan = document.querySelector('.nextPlan')
+const btnsContainer = document.querySelector('.plans .dots')
 
 planSlides.forEach(function (p_slide, p_index) {
     p_slide.style.left = `${p_index * 100}%`
 })
 
-let pCounter = 0
+generateSlideBtns(planSlides, btnsContainer, 'pIndex')
+let pDots = document.querySelectorAll('.dot')
 
-nextPlan.addEventListener("click", function () {
-    pCounter++
-    pCarousel()
-})
+btnsContainer.addEventListener('click', (p_event) => clickBtn(p_event, planSlides, pDots, 'pindex'))
 
-prevPlan.addEventListener("click", function () {
-    pCounter--
-    pCarousel()
-})
+let dot = document.querySelectorAll('.dot')
+dot[0].classList.add('active')
 
-function pCarousel() {
-    if (pCounter < planSlides.length - 1) {
-        nextPlan.style.display = "block"
-    } else {
-        nextPlan.style.display = "none"
+
+// ================= GLOBAL FUNCTIONS ===================
+
+function generateSlideBtns(slides = [], btnContainer, key) {
+    //debugger
+    let result = ''     // по началу мы имеем пустой result
+    //debugger
+
+    for (let i = 0; i < slides.length; i++) {       // длина наших слайдов 3, если i меньше длины слайдов выполнить код ниже
+        //debugger
+        result += `<div class="dot" data-${key}="${i}"></div>`      // если условие сверху выполяются, в result добавляется html: конетейнер "dot" с data-set(key) и индекс
+        //debugger        // фунция выполняется несколько раз пока условие не будет равна false
     }
 
-    if (pCounter > 0) {
-        prevPlan.style.display = "block"
-    } else {
-        prevPlan.style.display = "none"
-    }
+    let dots = document.querySelector('dot')
 
-    planSlides.forEach(function (p_slides, p_index) {
-        // counter = 1 | index = 0 | left = 0 => left = -100%    // its more good way 
-        p_slides.style.left = `${(-1 * pCounter + p_index) * 100}%`
-    })
+
+
+    //debugger
+    btnContainer.innerHTML = result;        //  потом мы пихаем в контейнер dots все содержимое переменной result 
+    // и все содержимое по сути добавится в html, но в браузере
+    //debugger
 }
 
-prevPlan.style.display = "none";
+
+function clickBtn(e, slides, dots, key = 'index') {
+    //debugger
+    if (e.target.classList.contains('dot')) {
+        //debugger
+        const index = Number(e.target.dataset[key])
+        //debugger
+        slides.forEach(function (slide, slideIndex) {
+            //debugger
+            slide.style.left = `${(slideIndex - index) * 100}%`
+            //debugger
+        });
+        //debugger
+        dots.forEach(function (dot) {
+            //debugger
+            dot.classList.remove('active')
+            //ebugger
+        });
+        //debugger
+        e.target.classList.add('active')
+
+        //debugger
+    }
+    //debugger
+}
+// debugger
+// const t = e;
+// debugger
+// const t1 = e.target;
+// debugger
+// const t2 = e.target.classList;       //  вот так надо разбираться в коде
+// debugger
+// const t3 = e.target.classList.contains('dot');
+// debugger
+
+
+// =========================== WALL OF SHAME ============================
+
+// let pCounter = 0
+
+// nextPlan.addEventListener("click", function () {
+//     pCounter++
+//     pCarousel()
+// })
+
+// prevPlan.addEventListener("click", function () {
+//     pCounter--
+//     pCarousel()
+// })
+
+// function pCarousel() {
+//     if (pCounter < planSlides.length - 1) {
+//         nextPlan.style.display = "block"
+//     } else {
+//         nextPlan.style.display = "none"
+//     }
+
+//     if (pCounter > 0) {
+//         prevPlan.style.display = "block"
+//     } else {
+//         prevPlan.style.display = "none"
+//     }
+
+//     planSlides.forEach(function (p_slides, p_index) {
+//         // counter = 1 | index = 0 | left = 0 => left = -100%    // its more good way 
+//         p_slides.style.left = `${(-1 * pCounter + p_index) * 100}%`
+//     })
+// }
+
+// prevPlan.style.display = "none";
